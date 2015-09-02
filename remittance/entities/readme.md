@@ -1,1 +1,1 @@
-## entitie stub
+## entities stub
