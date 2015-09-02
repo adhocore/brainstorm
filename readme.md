@@ -1,4 +1,4 @@
-## brainstrom
+## brainstorm
 
 - ideate, and give it a go
 - initial homeworks before app dev/design
