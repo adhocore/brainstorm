@@ -7,7 +7,8 @@
 
 (may *not* work right now, as it is work in progress)
 
-- `cd to/brainstorm/remittance`
-- `composer install`
-- edit `config.php` to match db credentials
-- run `php generate-schema.php`
+- `cd path/to/brainstorm/remittance`
+- run `composer install -o` (once only)
+- if you have newer deps, run `composer update -o`
+- edit `cli-config.php` to match db credentials
+- run `vendor/bin/doctrine`
