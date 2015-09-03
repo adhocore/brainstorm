@@ -18,7 +18,7 @@ class User
     protected $id;
 
     /**
-     * @ORM\Column(type="string",length=255,unique=true)
+     * @ORM\Column(type="string",length=50,unique=true)
      */
     protected $username;
 
@@ -28,42 +28,42 @@ class User
     protected $password;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=100)
      */
     protected $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255,nullable=true)
+     * @ORM\Column(type="string", length=100,nullable=true)
      */
     protected $middlename;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=100)
      */
     protected $lastname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=200)
      */
     protected $address;
 
-    /**
+    /*
      * @ORM\ManyToOne(targetEntity="models\Common\City")
      */
     protected $city;
 
     /**
-     * @ORM\Column(type="string", length=255,nullable=true)
+     * @ORM\Column(type="string", length=20,nullable=true)
      */
     protected $phone;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=20)
      */
     protected $mobile;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=100)
      */
     protected $email;
 }
