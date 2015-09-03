@@ -1,5 +1,9 @@
 <?php
 
+use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+
 require_once './vendor/autoload.php';
 
 // DB connection credentials for ORM
@@ -18,17 +22,16 @@ $em = function () use ($creds) {
     }
 
     $isDevMode = true;
-    $cache = new \Doctrine\Common\Cache\ArrayCache();
-    $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
+    $config = Setup::createAnnotationMetadataConfiguration(
         [__DIR__.'/src/Entity'],
         $isDevMode,
-        __DIR__.'/src/Proxy'
+        __DIR__.'/src/Proxy',
+        null,
+        false
     );
+    $config->setProxyNamespace('Proxy');
 
-    return $_em = \Doctrine\ORM\EntityManager::create(
-        $creds,
-        $config
-    );
+    return $_em = EntityManager::create($creds, $config);
 };
 
-return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($em());
+return ConsoleRunner::createHelperSet($em());
