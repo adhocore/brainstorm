@@ -13,3 +13,5 @@
 - use name="under_score" in db column annotations
 - use singular name to represent entity. eg. Entity\User
 - use plural name for database table (eg: users)
+- use `protected` visibility for entity attribs
+- define any constants in `UNDER_SCORED_ALL_CAPS`
