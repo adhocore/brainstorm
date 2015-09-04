@@ -11,7 +11,7 @@ $creds = [
     'driver' => 'pdo_mysql',
     'user' => 'root',
     'password' => '',
-    'host' => 'localhost',
+    'host' => '127.0.0.1',
     'dbname' => 'remittance',
 ];
 
