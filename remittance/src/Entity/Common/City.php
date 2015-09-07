@@ -30,5 +30,5 @@ class City
     /**
      * @ORM\Column(type="simple_array", nullable=true)
      */
-    protected $services = '';
+    protected $services = [];
 }
