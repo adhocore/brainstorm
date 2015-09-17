@@ -1,0 +1,62 @@
+terms: 
+(id,  name,       slug)
+1,  'Europe',     'europe'
+2,  'England',    'england' 
+3,  'Asia',       'asia'
+4,  'Japan',      'japan'
+5,  'S Korea',    's-korea'
+6,  'EPL',        'epl'
+7,  'EPL 15-16',  'epl-15-16'
+
+taxonomies:
+(id, name, remarks)
+1, 'region'
+2, 'country'
+3, 'club'
+9, 'season'
+4, 'league'
+5, 'match',
+5, 'friendly',
+7, 'national',
+8, 'tournament'
+
+taxonomy_trees: 
+(id, term_id,   taxonomy_id, parent_id)
+1,    1,        1,           null
+2,    2,        2,           1
+3,    3,        1,           null
+4,    4,        2,           3  
+5,    5,        2,           3  
+6,    6,        4,           null  
+
+posts: (news/footies)
+(id, reporter_id, title,  type,   tags)
+1,   1,           'tt',   'news', [europe,abc club,def club,epl]
+
+comments:
+(id, post_id, author_id, comment)
+
+events: (match,season,league,friendly,tournament)
+(id, name,        taxonomy_id, evt_start_date, evt_to_date,  parent_id)
+1,   'epl 15-16',  9,          '2015-01-01',   '2015-01-10', 
+2,   'match 001',  5,          '2015-01-01',   '2015-01-01', 1
+
+players:
+(id, name, )
+
+
+teams:
+
+
+staffs:
+
+
+team_players:
+team_id, player_id
+
+
+attributes:
+(id,  owner,   owner_id, key,   value)
+1,   'event',   1,        'a',   'b'
+2,   'player',  1,        'a',   'b'
+
