@@ -43,16 +43,19 @@ events: (match,season,league,friendly,tournament)
 
 players:
 (id, name, )
-
+1,   'C Ronaldo'
 
 teams:
-
+(id, name, event_id)
 
 staffs:
-
+(id, name, _etc)
 
 team_players:
-team_id, player_id
+(team_id, player_id)
+1,        1
+
+users: (reporter/user/api-client)
 
 
 attributes:
