@@ -13,6 +13,7 @@ taxonomies:
 1, 'region'
 2, 'country'
 3, 'club'
+10, 'team'
 9, 'season'
 4, 'league'
 5, 'match',
@@ -34,7 +35,7 @@ posts: (news/footies)
 1,   1,           'tt',   'news', [europe,abc club,def club,epl]
 
 comments:
-(id, post_id, author_id, comment)
+(id, post_id, author_id, parent_id, comment, flag_for, flag_against)
 
 events: (match,season,league,friendly,tournament)
 (id, name,        taxonomy_id, evt_start_date, evt_to_date,  parent_id)
@@ -48,18 +49,28 @@ players:
 teams:
 (id, name, event_id)
 
-staffs:
-(id, name, _etc)
-
-team_players:
-(team_id, player_id)
-1,        1
-
-users: (reporter/user/api-client)
-
+player_associations:
+(player_id, owner,   owner_id)
+1,          'club',  1
+1,          'team',  1
 
 attributes:
-(id,  owner,   owner_id, key,   value)
+(id,  owner,    owner_id, key,   value)
 1,   'event',   1,        'a',   'b'
 2,   'player',  1,        'a',   'b'
+
+roles:
+(id, name, descr)
+
+permissions:
+(id, name, descr)
+
+role_permissions:
+(role_id, permission_id)
+
+staffs:
+(id, username, name, role_id, status, _etc)
+
+users: (reporter/user/api-client)
+(id, type, username, name, email, mobile, phone, password, status, _etc)
 
