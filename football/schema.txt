@@ -30,7 +30,7 @@ taxonomy_trees:
 5,    5,        2,           3
 6,    6,        4,           null
 
-term_owners
+term_owners:
 (term_id, owner, owner_id)
 
 posts: (news/footies)
